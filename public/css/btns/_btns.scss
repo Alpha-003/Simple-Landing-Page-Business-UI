@@ -1,0 +1,15 @@
+@import './../colors/colors';
+.btn-primary{
+    --bs-btn-border-color:#{$primary};
+    --bs-btn-bg:#{$primary};
+    --bs-btn-hover-bg:#{$secondary};
+    --bs-btn-hover-border-color:#{$secondary};
+    border-radius: 0;
+}
+.btn-secondary{
+    --bs-btn-border-color:#{$secondary};
+    --bs-btn-bg:#{$secondary};
+    --bs-btn-hover-bg:#{$primary};
+    --bs-btn-hover-border-color:#{$primary};
+    border-radius: 0;
+}
