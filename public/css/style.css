@@ -65,11 +65,15 @@ body {
   margin: 150px 0;
 }
 .key-features .right-side .key-features-list {
-  list-style-image: url("./../assets/key-features/list-icons.png");
   line-height: 36px;
+  padding-left: 0;
 }
 .key-features .right-side .key-features-list li {
-  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.key-features .right-side .key-features-list li .list-icon {
+  margin-right: 20px;
 }
 
 .why-choose-us {
@@ -93,7 +97,7 @@ body {
   position: relative;
   border: 1px solid #000;
   padding: 40px 30px 25px;
-  width: 50%;
+  width: 100%;
   text-align: justify;
 }
 .why-choose-us .customers-review .reviews .each-review-card .stars {
@@ -147,11 +151,27 @@ body {
     display: none;
   }
 }
+@media screen and (max-width: 991px) {
+  header {
+    height: 100px;
+  }
+  header nav.navbar {
+    position: absolute;
+    width: 100%;
+    background: white;
+  }
+}
 @media screen and (max-width: 767px) {
-  .customers-review .reviews {
+  .key-features {
+    margin: 60px 0 130px 0;
+  }
+  .why-choose-us .customers-review {
+    margin: 50px 0;
+  }
+  .why-choose-us .customers-review .reviews {
     flex-direction: column;
   }
-  .customers-review .reviews .each-review-card {
+  .why-choose-us .customers-review .reviews .each-review-card {
     margin-top: 15px;
     width: 100% !important;
   }
