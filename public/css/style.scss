@@ -59,26 +59,33 @@ body {
 
 .why-choose-us {
     background: $bgGrey;
-    padding: 65px 0;
+    padding: 65px 0 0 0;
 
     .why-choose-us-top {
         .why-choose-us-top-right {
             margin-top: -125px;
+        }
+
+        p {
+            text-align: justify;
         }
     }
 
     // see what our customers say
     .customers-review {
         margin: 100px 0;
-        .reviews{
+
+        .reviews {
             display: flex;
             gap: 18px;
+
             .each-review-card {
                 position: relative;
                 border: 1px solid $black;
                 padding: 40px 30px 25px;
                 width: 50%;
-    
+                text-align: justify;
+
                 .stars {
                     position: absolute;
                     font-size: 18px;
@@ -95,30 +102,79 @@ body {
         }
 
     }
+
     // get mortgage approval faster!
-    .get-mortgage{
-        .right{
-            background: url('../assets/business.jpg') no-repeat;
-            //   background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
-            background-position: right;
+    .get-mortgage {
+        text-align: justify;
+
+        .right {
+            position: relative;
+            padding: 0;
+            background: url('../assets/business.jpg') no-repeat center;
             background-size: cover;
+
+            &::after {
+                content: "";
+                background: linear-gradient(135deg, #F6F6F6 25%, transparent 1%);
+                width: 100%;
+                position: absolute;
+                z-index: 1;
+                height: 100%;
+            }
+        }
+    }
+    // why-choose-us-footer
+    .why-choose-us-footer{
+        margin: 80px 0 0 0;
+        .footer{
+            margin: 30px 0 10px 0;
+            font-weight: 300;
+            font-size: 14px;
         }
     }
 }
 
 // responsiveness
+// screen below 1199px
+@media screen and (max-width:1199px) {
+ // why choose us
+
+ .why-choose-us {
+
+    // get mortgage approval faster!
+    .get-mortgage {
+        .left {
+            position: relative;
+            color: $white;
+            padding: 25px;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('../assets/business.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .right {
+            display: none;
+        }
+    }
+}
+
+}
 
 // screen below 768px
-@media screen and (max-width:767px){
-     // see what our customers say
-     .customers-review {
-        .reviews{
+@media screen and (max-width:767px) {
+
+    // see what our customers say
+    .customers-review {
+        .reviews {
             flex-direction: column;
+
             .each-review-card {
                 margin-top: 15px;
-                width: 100%!important;
+                width: 100% !important;
             }
         }
 
     }
+
 }
