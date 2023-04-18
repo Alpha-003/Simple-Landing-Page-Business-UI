@@ -141,7 +141,7 @@ body {
 .get-mortgage .right {
   position: relative;
   padding: 0;
-  background: url("../assets/business.jpg") no-repeat center;
+  background: url("./../assets/business.jpg") no-repeat center;
   background-size: cover;
 }
 .get-mortgage .right::after {
@@ -174,7 +174,7 @@ body {
     position: relative;
     color: #fff;
     padding: 25px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/business.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../assets/business.jpg");
     background-size: cover;
     background-position: right;
   }
