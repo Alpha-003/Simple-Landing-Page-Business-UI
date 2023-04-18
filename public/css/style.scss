@@ -9,6 +9,10 @@
 body {
     font-family: 'Lexend', sans-serif;
 }
+// allbtns on body which will have equal sizes
+.body-btns{
+    width: 220px;
+}
 
 // main navbar
 #navbarSupportedContent {
@@ -34,7 +38,11 @@ body {
         padding: 150px 0 125px 0;
 
         .hero-title {
+            font-size: 46px;
             font-weight: 700;
+        }
+        .hero-paragraph{
+            margin-bottom: 75px;
         }
     }
 }
@@ -47,10 +55,12 @@ body {
         .key-features-list {
             line-height: 36px;
             padding-left: 0;
+
             li {
                 display: flex;
                 align-items: center;
-                .list-icon{
+
+                .list-icon {
                     margin-right: 20px;
                 }
             }
@@ -73,94 +83,100 @@ body {
             text-align: justify;
         }
     }
+}
 
-    // see what our customers say
-    .customers-review {
-        margin: 100px 0;
+// see what our customers say
+.customers-review {
+    margin: 200px 0;
 
-        .reviews {
-            display: flex;
-            gap: 18px;
-
-            .each-review-card {
-                position: relative;
-                border: 1px solid $black;
-                padding: 40px 30px 25px;
-                width: 100%;
-                text-align: justify;
-
-                .stars {
-                    position: absolute;
-                    font-size: 18px;
-                    top: -26px;
-                    left: 50%;
-                    background: $white;
-                    transform: translateX(-50%);
-                    padding: 10px;
-                    border-radius: 30px;
-                    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, .1);
-                    color: $yellow;
+    .reviews {
+        display: flex;
+        gap: 18px;
+        padding-right: 5px;
+        .owl-carousel{
+            .owl-stage-outer{
+                padding-top: 30px;
+                .each-review-card {
+                    position: relative;
+                    border: 1px solid $black;
+                    padding: 40px 30px 25px;
+                    width: 100%;
+                    text-align: justify;
+        
+                    .stars {
+                        position: absolute;
+                        font-size: 18px;
+                        top: -26px;
+                        left: 50%;
+                        background: $white;
+                        transform: translateX(-50%);
+                        padding: 10px;
+                        border-radius: 30px;
+                        box-shadow: 0 3px 3px 1px rgba(0, 0, 0, .1);
+                        color: $yellow;
+                    }
                 }
             }
-        }
-
-    }
-
-    // get mortgage approval faster!
-    .get-mortgage {
-        text-align: justify;
-
-        .right {
-            position: relative;
-            padding: 0;
-            background: url('../assets/business.jpg') no-repeat center;
-            background-size: cover;
-
-            &::after {
-                content: "";
-                background: linear-gradient(135deg, #F6F6F6 25%, transparent 1%);
-                width: 100%;
-                position: absolute;
-                z-index: 1;
-                height: 100%;
+            // owl-carousel-btns
+            .owl-nav,.owl-dots{
+                display: none;
             }
         }
+
+       
     }
 
-    // why-choose-us-footer
-    .why-choose-us-footer {
-        margin: 80px 0 0 0;
+}
 
-        .footer {
-            margin: 30px 0 10px 0;
-            font-weight: 300;
-            font-size: 14px;
+ // get mortgage approval faster!
+ .get-mortgage {
+    text-align: justify;
+
+    .right {
+        position: relative;
+        padding: 0;
+        background: url('../assets/business.jpg') no-repeat center;
+        background-size: cover;
+
+        &::after {
+            content: "";
+            background: linear-gradient(135deg, $white 25%, transparent 1%);
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            height: 100%;
         }
     }
 }
 
+
+ // main-footer
+ .main-footer {
+    margin: 110px 0 0 0;
+
+    .footer {
+        margin: 30px 0 10px 0;
+        font-weight: 300;
+        font-size: 14px;
+    }
+}
 // responsiveness
 // screen below 1199px
 @media screen and (max-width:1199px) {
-    // why choose us
+    // get mortgage approval faster!
+    .get-mortgage {
+        .left {
+            position: relative;
+            color: $white;
+            padding: 25px;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../assets/business.jpg');
+            background-size: cover;
+            background-position: right;
+        }
 
-    .why-choose-us {
-
-        // get mortgage approval faster!
-        .get-mortgage {
-            .left {
-                position: relative;
-                color: $white;
-                padding: 25px;
-                background-image:
-                    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../assets/business.jpg');
-                background-size: cover;
-                background-position: center;
-            }
-
-            .right {
-                display: none;
-            }
+        .right {
+            display: none;
         }
     }
 
@@ -172,40 +188,44 @@ body {
     //  header
     header {
         height: 100px;
+
         nav.navbar {
             position: absolute;
             width: 100%;
             background: white;
         }
     }
-    // main part
-    // main{
-    //     margin-top: 100px;
-    // }
 }
 
 // screen below 768px
 @media screen and (max-width:767px) {
+    
     // key-features
-.key-features {
-    margin:60px 0 130px 0;
-}
+    .key-features {
+        margin: 70px 0 140px 0;
+    }
+    // see what our customers say
+    .customers-review {
+        margin:100px 0;
 
+        .reviews {
+            flex-direction: column;
 
-.why-choose-us{
-        // see what our customers say
-        .customers-review {
-            margin: 50px 0;
-            .reviews {
-                flex-direction: column;
-    
-                .each-review-card {
-                    margin-top: 15px;
-                    width: 100% !important;
-                }
+            .each-review-card {
+                margin-top: 15px;
+                width: 100% !important;
             }
-    
         }
+
     }
 
 }
+
+// screen below 
+    @media screen and (max-width:485px) {
+        .get-mortgage {
+            .left {
+                background-position: center;
+            }
+        }
+    }
