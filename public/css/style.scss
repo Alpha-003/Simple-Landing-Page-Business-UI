@@ -87,7 +87,8 @@ body {
 
 // see what our customers say
 .customers-review {
-    margin: 200px 0;
+    margin: 180px 0;
+    margin-bottom: 120px;
 
     .reviews {
         display: flex;
@@ -130,8 +131,9 @@ body {
 
  // get mortgage approval faster!
  .get-mortgage {
-    text-align: justify;
-
+    p{
+        text-align: justify;
+    }
     .right {
         position: relative;
         padding: 0;
@@ -140,11 +142,13 @@ body {
 
         &::after {
             content: "";
-            background: linear-gradient(135deg, $white 25%, transparent 1%);
+            background: linear-gradient(142deg, $white 26%, transparent 1%);
             width: 100%;
             position: absolute;
             z-index: 1;
             height: 100%;
+            top:-1px;
+            left: -1px;
         }
     }
 }
@@ -161,7 +165,21 @@ body {
     }
 }
 // responsiveness
-// screen below 1199px
+// screen below 1399px
+@media screen and (max-width:1399px) {
+     // get mortgage approval faster!
+ .get-mortgage {
+
+    .right {
+        &::after {
+            background: linear-gradient(129deg, $white 25%, transparent 1%);
+        }
+        }
+    }
+}
+
+
+    // screen below 1199px
 @media screen and (max-width:1199px) {
     // get mortgage approval faster!
     .get-mortgage {
@@ -170,7 +188,7 @@ body {
             color: $white;
             padding: 25px;
             background-image:
-                linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../assets/business.jpg');
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/business.jpg');
             background-size: cover;
             background-position: right;
         }
@@ -197,7 +215,7 @@ body {
     }
 }
 
-// screen below 768px
+// screen below 767px
 @media screen and (max-width:767px) {
     
     // key-features
@@ -228,4 +246,28 @@ body {
                 background-position: center;
             }
         }
+        header{
+            .navbar{
+                .navbar-brand{
+                    margin: 0;
+                    width: 140px;
+                }
+            }
+        }
+        // herosection
+.hero-section {
+    background:    linear-gradient(to right,rgba(255, 255, 255, 0.3) 100%, rgba(0, 0, 0, 0.2)), url('./../assets/hero-mobile.jpg');
+    
+    .hero-row {
+        padding: 150px 0 125px 0;
+
+        .hero-title {
+            font-size: 34px;
+            font-weight: 700;
+        }
+        .hero-paragraph{
+            text-align: justify;
+        }
+    }
+}
     }

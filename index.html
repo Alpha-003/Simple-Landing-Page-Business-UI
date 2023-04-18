@@ -23,19 +23,20 @@
 </head>
 
 <body>
-    <header class="d-none">
+    <header>
         <nav class="navbar navbar-expand-lg py-4">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="./public/assets/logo/logo.svg" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <!-- the button and ul menu are currently displayed none -->
+                <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-5">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-5 d-none">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
@@ -54,7 +55,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="ms-lg-5 d-none d-lg-block">
+                <div class="ms-lg-5">
                     <button class="btn btn-outline-primary" type="button">LOGIN</button>
                     <button class="btn btn-secondary ms-2" type="button">REGISTER</button>
                 </div>
@@ -69,8 +70,8 @@
                     <div class="col-xl-7 col-xxl-6">
                         <h1 class="hero-title mb-4">Mortgage Documents Verification</h1>
                         <p class="hero-paragraph">Streamline verification of mortgage documents and shorten
-                            processing<br />
-                            times, enforce standardization and compliance, and improve<br />
+                            processing<br class="d-none d-md-block" />
+                            times, enforce standardization and compliance, and improve<br class="d-none d-md-block" />
                             productivity and customer satisfaction.</p>
                         <button class="btn btn-outline-primary body-btns d-flex justify-content-center align-items-center" type="button">
                             WATCH DEMO
@@ -151,43 +152,7 @@
                     <h2 class="text-title text-center">
                         See What our Customers Say
                     </h2>
-                    <!-- <div class="col-12 py-md-5 py-2">
-                        <div class="reviews">
-                            <div class="each-review-card">
-                                <div class="stars">
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                </div>
-                                <p>
-                                    "As a company agent, this platform saved me time and effort. Real-time updates and
-                                    streamlined communication made the process much smoother. It made my job so much
-                                    easier and allowed me to verify documents in a fraction of the time it would have
-                                    taken me before."
-                                </p>
-                                <span class="author"> ~ John Doe ~ </span>
-                            </div>
-                            <div class="each-review-card">
-                                <div class="stars">
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                </div>
-                                <p>
-                                    "As a company agent, this platform saved me time and effort. Real-time updates and
-                                    streamlined communication made the process much smoother. It made my job so much
-                                    easier and allowed me to verify documents in a fraction of the time it would have
-                                    taken me before."
-                                </p>
-                                <span class="author"> ~ John Doe ~ </span>
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="col-12 reviews mt-5">
+                    <div class="col-12 reviews mt-md-5">
                         <div class="owl-carousel owl-theme">
                             <div class="item each-review-card">
                                 <div class="stars">
